@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.yulu.lhjnews.activity.MainActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#aa0000">
+
+        <ImageView
+            android:id="@+id/main_title_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/ic_title_home_default" />
+
+        <ImageView
+            android:id="@+id/main_title_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/ic_title_share_default" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="资讯"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl1"
+        android:background="@color/main_top_color"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <RadioButton
+            android:id="@+id/society"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="社会" />
+
+        <RadioButton
+            android:id="@+id/war"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="军事" />
+
+        <RadioButton
+            android:id="@+id/music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="娱乐" />
+
+        <RadioButton
+            android:id="@+id/newbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="新闻" />
+
+        <RadioButton
+            android:id="@+id/movie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="电影" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_line_height"
+        android:layout_below="@+id/radiogroup"
+        android:layout_gravity="bottom"
+        android:background="@color/main_top_color"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="@dimen/main_matrix_width"
+            android:layout_height="@dimen/main_line_height"
+            android:scaleType="matrix"
+            android:src="@color/matrix_color" />
+    </LinearLayout>
+
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_top_color" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"
+        android:layout_below="@+id/l1" />
+
+
+</RelativeLayout>
+    <RelativeLayout
+
+        android:id="@+id/dddd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:background="@drawable/bg_slidingmenu_left"
+        >
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"/>
+
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text=""
+            android:textOn=""
+            android:textOff=""
+            android:button="@drawable/tooglebutton"
+            android:checked="true"
+            android:layout_below="@+id/exit"
+            android:layout_toRightOf="@+id/exit"
+            android:layout_toEndOf="@+id/exit"
+            android:layout_marginTop="193dp" />
+
+        <TextView
+            android:id="@+id/service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息推送"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_alignBaseline="@+id/toggleButton"
+            android:layout_alignBottom="@+id/toggleButton"
+            android:layout_toRightOf="@+id/toggleButton"
+            android:layout_toEndOf="@+id/toggleButton" />
+
+    </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>

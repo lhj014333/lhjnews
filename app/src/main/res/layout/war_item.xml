@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@android:drawable/ic_lock_idle_alarm"
+        android:id="@+id/war_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="时间"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/war_time"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/war_icon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="内容"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/war_matter"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:maxLines="1"
+        android:layout_above="@+id/war_time"
+        android:layout_toRightOf="@+id/war_icon"
+        android:layout_toEndOf="@+id/war_icon" />
+
+    <TextView
+        android:text="标题"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/war_title"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/war_matter"
+        android:layout_alignStart="@+id/war_matter"
+        android:layout_marginTop="11dp" />
+
+</RelativeLayout>

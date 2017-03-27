@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_web"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.yulu.lhjnews.activity.WebActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+         android:background="#aa0000"
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_title_home_default"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/web_home" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/btn_star_big_on"
+
+            android:id="@+id/web_favorite"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="资讯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textSize="20sp"
+            android:textColor="@color/main_top_tab_color_2"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_set_as"
+            android:id="@+id/web_share"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/web_favorite"
+            android:layout_toStartOf="@+id/web_favorite"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp" />
+    </RelativeLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/rl1"
+        android:max="100"
+        android:id="@+id/progressBar" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/progressBar">
+
+
+    </WebView>
+</RelativeLayout>
